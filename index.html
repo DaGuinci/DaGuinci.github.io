@@ -3,22 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/styles/styles.css" />
+    <script src="src/scripts/bootstrap.bundle.min.js"></script>
     <title>Guillaume Even</title>
 </head>
 <body>
-    <div class="hero">
-        <div class="hero__title">
-            <h1>Guillaume Even</h1>
-            <h2>Web Developer</h2>
+    <div class="container-fluid bg-primary">
+        <div class="row">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+        </div>
+        <div class="row vh-100 justify-content-center align-items-center">
+            <div class="col-10 text-danger">
+                <h1>Guillaume Even</h1>
+                <div class="line border border-danger"></div>
+                <h2>Web Developer</h2>
+            </div>
         </div>
     </div>
-    <div class="main">
-        <div class="main__menu">
-            <ul class="main__menu__entries">
-                <li>I, me and myself</li>
-                <li>My work</li>
-            </ul>
-        </div>
-    </div>
+
 </body>
 </html>

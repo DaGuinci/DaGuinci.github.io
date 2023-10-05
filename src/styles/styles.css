@@ -1,3 +1,13 @@
+.bg-primary {
+  background-color: #3E7188 !important;
+}
 
+.text-secondary {
+  color: #dd9300 !important;
+}
+
+.border-secondary {
+  border-color: #dd9300 !important;
+}
 
 /*# sourceMappingURL=styles.css.map */

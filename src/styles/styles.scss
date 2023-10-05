@@ -1,2 +1,14 @@
 $primary: #3E7188;
 $secondary: #dd9300;
+
+.bg-primary{
+    background-color: $primary !important;
+}
+
+.text-secondary{
+    color: $secondary !important;
+}
+
+.border-secondary{
+    border-color: $secondary !important;
+}

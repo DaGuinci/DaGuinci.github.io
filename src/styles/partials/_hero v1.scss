@@ -1,0 +1,76 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: $blue1;
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        min-height: 70px;;
+
+        .line {
+            align-self: center;
+            border: 1px solid $orange;
+            width: 200%;
+            animation: line 3s;
+            @keyframes line {
+                0% {
+                    width: 0%;
+                }
+                25% {
+                    width: 200%;
+                }
+            }
+        }
+
+        h1 {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: name 3s;
+            transform: rotate(0);
+            transform-origin: 0% 50%;
+            @keyframes name {
+                0% {
+                    width: 0%;
+                    transform: translateX(-8%);
+                }
+                25% {
+                    width: 0%;
+                    transform: rotate(-90deg) translateX(-1.35rem);
+                }
+                50% {
+                    width: 100%;
+                    transform: rotate(-90deg) translateX(-1.35rem);
+                }
+                75% {
+                    transform: rotate(0) translateX(0);
+                }
+            }
+
+        }
+
+        h2 {
+            white-space: nowrap;
+            overflow: hidden;
+            animation: subtitle 3s;
+            transform-origin: 100% 100%;
+            @keyframes subtitle {
+                0% {
+                    max-height: 0px;
+                }
+                75% {
+                    max-height: 0px;
+                }
+                100% {
+                    max-height: 100px;
+                }
+            }
+        }
+        color: $orange;
+    }
+}

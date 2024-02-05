@@ -1,0 +1,98 @@
+.projects_section {
+    background: $web-grey;
+    display: flex;
+    padding: 90px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    gap: 20px;
+    max-width: 50%;
+    padding-right: 50px;
+
+    .skill {
+        color: $web-red;
+        font-size: 1.2rem;
+        transition: all 250ms linear;
+        background-color: transparent;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 15px;
+
+        &:hover {
+            background-color: $web-orange;
+            color: $web-grey;
+            translate: -5px -5px;
+            box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+        }
+
+        &.active {
+            border: 2px solid $web-orange;
+        }
+    }
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 50%;
+    margin: auto;
+
+    .project {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        &.hidden {
+            display: none;
+        }
+
+        &__title {
+            color: $web-blue;
+            animation: proj-title 1.5s;
+            @keyframes proj-title {
+                0% {
+                    transform: translateX(-10%);
+                    opacity: 0%;
+                }
+                100% {
+                    transform: translateX(0%);
+                    opacity: 100%;
+                }
+            }
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-left: 60px;
+            color: $web-orange;
+            animation: proj-content 1.5s;
+            @keyframes proj-content {
+                0% {
+                    opacity: 0%;
+                }
+                50% {
+                    opacity: 0%;
+                }
+                100% {
+                    opacity: 100%;
+                }
+            }
+
+            &__name {
+                font-size: 1.3rem;
+                color: $web-blue;
+            }
+
+            a {
+                color: $web-green;
+            }
+        }
+    }
+}

@@ -4,11 +4,23 @@ $blue1: #3E7188;
 
 $web-green: #c3e88d;
 $web-grey: #263238;
-$web-orange: #ffac4f;
+$web-orange: #dd9300;
 $web-blue: #5D9CEC;
 $web-red: #f06a5d;
 
+$small: 0; // 576px
+$medium: 640px;
+$large: 1024px;
+$xlarge: 1200px;
+$xxlarge: 1440px;
 
+$breakpoints: (
+    'small': 0,
+    'medium': $medium,
+    'large': $large,
+    'xlarge': $xlarge,
+    'xxlarge': $xxlarge
+);
 
 // &.color-ruby {
 //     background-color: #D8334A;

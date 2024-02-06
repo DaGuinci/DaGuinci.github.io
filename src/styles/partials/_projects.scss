@@ -1,97 +1,167 @@
 .projects_section {
     background: $web-grey;
-    display: flex;
-    padding: 90px;
-}
+    width: 100%;
 
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    justify-content: center;
-    gap: 20px;
-    max-width: 50%;
-    padding-right: 50px;
-
-    .skill {
-        color: $web-red;
-        font-size: 1.2rem;
-        transition: all 250ms linear;
-        background-color: transparent;
-        padding: 10px 20px;
-        cursor: pointer;
-        border-radius: 15px;
-
-        &:hover {
-            background-color: $web-orange;
-            color: $web-grey;
-            translate: -5px -5px;
-            box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-        }
-
-        &.active {
-            border: 2px solid $web-orange;
-        }
-    }
-}
-
-.projects {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 50%;
-    margin: auto;
-
-    .project {
+    .content {
         display: flex;
-        flex-direction: column;
-        gap: 15px;
+        flex-wrap: wrap;
+        gap: 50px;
+        align-content: flex-start;
+        margin: 0 40px;
+        padding: 70px 0;
+        height: 100vh;
+        box-sizing: border-box;
 
-        &.hidden {
-            display: none;
+        @include breakpoint(medium, up) {
+            margin: 0 60px;
+            gap: 0;
+            justify-content: space-around;
+            align-content: normal;
         }
 
-        &__title {
-            color: $web-blue;
-            animation: proj-title 1.5s;
-            @keyframes proj-title {
-                0% {
-                    transform: translateX(-10%);
-                    opacity: 0%;
-                }
-                100% {
-                    transform: translateX(0%);
-                    opacity: 100%;
-                }
+        @include breakpoint(large, up) {
+            margin: 0 100px;
+            gap: 0;
+            justify-content: flex-start;
+            align-content: normal;
+        }
+
+        @include breakpoint(xxlarge, up) {
+            margin: 0 200px;
+            gap: 0;
+            justify-content: space-around;
+            align-content: normal;
+        }
+
+        .title {
+            flex-grow: 1;
+            flex-basis: 100%;
+
+            @include breakpoint(medium, up) {
+                margin-bottom: 40px;
+            }
+
+            @include breakpoint(medium, up) {
+                flex-grow: 0;
             }
         }
 
-        &__content {
+        .skills {
             display: flex;
+            flex-wrap: wrap;
+            flex-basis: auto;
+            align-content: flex-start;
+            justify-content: center;
+            gap: 20px;
+            max-width: 100%;
+            padding-right: 50px;
+
+            @include breakpoint(medium, up) {
+                flex-basis: 30%;
+                max-width: 30%;
+            }
+
+            .skill {
+                color: $web-red;
+                font-size: 1.2rem;
+                transition: all 250ms linear;
+                background-color: transparent;
+                padding: 10px 20px;
+                cursor: pointer;
+                border-radius: 15px;
+
+                &:hover {
+                    background-color: $web-orange;
+                    color: $web-grey;
+                    translate: -5px -5px;
+                    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+                }
+
+                &.active {
+                    border: 2px solid $web-orange;
+                }
+            }
+        }
+
+        .projects {
+            display: flex;
+            flex-basis: auto;
             flex-direction: column;
-            gap: 10px;
-            padding-left: 60px;
-            color: $web-orange;
-            animation: proj-content 1.5s;
-            @keyframes proj-content {
-                0% {
-                    opacity: 0%;
-                }
-                50% {
-                    opacity: 0%;
-                }
-                100% {
-                    opacity: 100%;
-                }
+            overflow-y: scroll;
+            gap: 20px;
+            max-height: 45%;
+
+            @include breakpoint(medium, up) {
+                flex-basis: 50%;
+                max-height: 100%;
             }
 
-            &__name {
-                font-size: 1.3rem;
-                color: $web-blue;
+            @include breakpoint(large, up) {
+                flex-basis: 60%;
+                max-height: 85%;
             }
 
-            a {
-                color: $web-green;
+            @include breakpoint(xxlarge, up) {
+                flex-basis: 40%;
+                max-height: 100%;
+            }
+
+            .project {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                &.hidden {
+                    display: none;
+                }
+
+                &__title {
+                    color: $web-blue;
+                    animation: proj-title 1.5s;
+                    @keyframes proj-title {
+                        0% {
+                            transform: translateX(-10%);
+                            opacity: 0%;
+                        }
+                        100% {
+                            transform: translateX(0%);
+                            opacity: 100%;
+                        }
+                    }
+                }
+
+                &__content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    padding-left: 60px;
+                    color: $web-orange;
+                    animation: proj-content 1.5s;
+                    @keyframes proj-content {
+                        0% {
+                            opacity: 0%;
+                        }
+                        50% {
+                            opacity: 0%;
+                        }
+                        100% {
+                            opacity: 100%;
+                        }
+                    }
+
+                    &__name {
+                        font-size: 1.3rem;
+                        color: $web-blue;
+                    }
+
+                    &__skills {
+                        line-height: 1.7rem;
+                    }
+
+                    a {
+                        color: $web-green;
+                    }
+                }
             }
         }
     }

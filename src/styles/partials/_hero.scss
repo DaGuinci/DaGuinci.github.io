@@ -12,28 +12,36 @@
         align-items: flex-end;
         min-height: 70px;
         gap: 10px;
+        color: $orange;
 
         .line {
             align-self: center;
             border: 1px solid $orange;
-            width: 200%;
+            width: 120%;
             animation: line 3s;
             @keyframes line {
                 0% {
                     width: 0%;
                 }
                 25% {
-                    width: 200%;
+                    width: 120%;
+                    @include breakpoint(medium, up) {
+                        width: 200%;
+                    }
                 }
+            }
+
+            @include breakpoint(medium, up) {
+                width: 200%;
             }
         }
 
         .nameblock {
-            min-height: 60px;
+            min-height: 40px;
             overflow: hidden;
 
             h1 {
-                font-size: 3rem;
+                font-size: 2rem;
                 width: 100%;
                 white-space: nowrap;
                 overflow: hidden;
@@ -51,8 +59,14 @@
                     }
                 }
 
+                @include breakpoint(medium, up) {
+                    font-size: 3rem;
+                }
             }
 
+            @include breakpoint(medium, up) {
+                min-height: 60px;
+            }
         }
 
         .careerblock {
@@ -60,7 +74,7 @@
             overflow: hidden;
 
             h2 {
-                font-size: 2rem;
+                font-size: 1.6rem;
                 white-space: nowrap;
                 overflow: hidden;
                 animation: subtitle $introDuration;
@@ -76,9 +90,12 @@
                         transform: translateY(0%);
                     }
                 }
+
+                @include breakpoint(medium, up) {
+                    font-size: 2rem;
+                }
             }
         }
 
-        color: $orange;
     }
 }

@@ -1,0 +1,33 @@
+/*
+* Ex: @include breakpoint(large, down) {}
+*/
+@mixin breakpoint($size, $direction) {
+
+    @if $size == 'small' and $direction == 'only' {
+      @media (min-width: #{$small}) and (max-width: #{$medium - 1}) { @content; }
+    } @else if $size == 'medium' and $direction == 'only' {
+      @media (min-width: #{$medium}) and (max-width: #{$large - 1}) { @content; }
+    } @else if $size == 'large' and $direction == 'only' {
+      @media (min-width: #{$large}) and (max-width: #{$xlarge - 1}) { @content; }
+    } @else if $size == 'small' and $direction == 'down' {
+      @media (max-width: #{$small}) { @content; }
+    } @else if $size == 'medium' and $direction == 'down' {
+      @media (max-width: #{$medium}) { @content; }
+    } @else if $size == 'large' and $direction == 'down' {
+      @media (max-width: #{$large}) { @content; }
+    } @else if $size == 'xlarge' and $direction == 'down' {
+      @media (max-width: #{$xlarge}) { @content; }
+    } @else if $size == 'small' and $direction == 'up' {
+      @media (min-width: #{$small}) { @content; }
+    } @else if $size == 'medium' and $direction == 'up' {
+      @media (min-width: #{$medium}) { @content; }
+    } @else if $size == 'large' and $direction == 'up' {
+      @media (min-width: #{$large}) { @content; }
+    } @else if $size == 'xlarge' and $direction == 'up' {
+      @media (min-width: #{$xlarge}) { @content; }
+    } @else if str-index(#{$size}, 'px') and $direction == 'down' {
+      @media (max-width: #{$size}) { @content; }
+    } @else if str-index(#{$size}, 'px') and $direction == 'up' {
+      @media (min-width: #{$size}) { @content; }
+    }
+}

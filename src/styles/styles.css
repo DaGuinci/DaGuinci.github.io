@@ -3,6 +3,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 ul,
 p,
 a {
@@ -148,7 +149,7 @@ h2 {
   gap: 30px;
   align-content: flex-start;
   margin: 0 40px;
-  padding: 70px 0;
+  padding: 40px 0;
   height: 100vh;
   box-sizing: border-box;
 }
@@ -165,6 +166,7 @@ h2 {
     gap: 0;
     justify-content: flex-start;
     align-content: normal;
+    padding: 70px 0;
   }
 }
 .projects_section .content .title {
@@ -295,6 +297,75 @@ h2 {
 }
 .projects_section .content .projects .project__content a {
   color: #c3e88d;
+}
+
+.profile_section {
+  background: #dd9300;
+  width: 100%;
+}
+.profile_section .content {
+  margin: 0 40px;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  padding: 40px 0;
+  color: #263238;
+  height: 100vh;
+}
+.profile_section .content__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.profile_section .content__title img {
+  max-width: 120px;
+  border-radius: 50%;
+}
+.profile_section .content__title h2 {
+  color: #263238;
+}
+.profile_section .content__route {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 55%;
+  overflow: scroll;
+}
+.profile_section .content__route__step {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.profile_section .content__route__step h5 {
+  font-size: 1rem;
+}
+.profile_section .content__route__step .formation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 10px;
+}
+.profile_section .content__route__step .formation .degree {
+  padding-left: 20px;
+}
+.profile_section .content__route__step .career {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 10px;
+}
+.profile_section .content__route__step .career .job {
+  padding-left: 20px;
+}
+.profile_section .content__route__step .volunteering {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 10px;
+}
+.profile_section .content__route__step .volunteering p {
+  padding-left: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */

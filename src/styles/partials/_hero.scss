@@ -32,6 +32,10 @@
             }
 
             @include breakpoint(medium, up) {
+                width: 150%;
+            }
+
+            @include breakpoint(large, up) {
                 width: 200%;
             }
         }

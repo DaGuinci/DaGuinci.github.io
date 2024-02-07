@@ -70,6 +70,11 @@ h2 {
 }
 @media (min-width: 640px) {
   .hero__title .line {
+    width: 150%;
+  }
+}
+@media (min-width: 1024px) {
+  .hero__title .line {
     width: 200%;
   }
 }
@@ -140,7 +145,7 @@ h2 {
 .projects_section .content {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 30px;
   align-content: flex-start;
   margin: 0 40px;
   padding: 70px 0;
@@ -152,7 +157,6 @@ h2 {
     margin: 0 60px;
     gap: 0;
     justify-content: space-around;
-    align-content: normal;
   }
 }
 @media (min-width: 1024px) {
@@ -183,24 +187,30 @@ h2 {
   flex-basis: auto;
   align-content: flex-start;
   justify-content: center;
-  gap: 20px;
   max-width: 100%;
-  padding-right: 50px;
 }
 @media (min-width: 640px) {
   .projects_section .content .skills {
     flex-basis: 30%;
     max-width: 30%;
+    padding-right: 50px;
+    gap: 20px;
   }
 }
 .projects_section .content .skills .skill {
   color: #f06a5d;
-  font-size: 1.2rem;
+  font-size: 1rem;
   transition: all 250ms linear;
   background-color: transparent;
-  padding: 10px 20px;
+  padding: 8px 13px;
   cursor: pointer;
   border-radius: 15px;
+}
+@media (min-width: 640px) {
+  .projects_section .content .skills .skill {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
 }
 .projects_section .content .skills .skill:hover {
   background-color: #dd9300;
@@ -217,18 +227,17 @@ h2 {
   flex-direction: column;
   overflow-y: scroll;
   gap: 20px;
-  max-height: 45%;
+  max-height: 65%;
 }
 @media (min-width: 640px) {
   .projects_section .content .projects {
     flex-basis: 50%;
-    max-height: 100%;
+    max-height: 85%;
   }
 }
 @media (min-width: 1024px) {
   .projects_section .content .projects {
     flex-basis: 60%;
-    max-height: 85%;
   }
 }
 .projects_section .content .projects .project {
@@ -257,9 +266,14 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding-left: 60px;
+  padding-left: 20px;
   color: #dd9300;
   animation: proj-content 1.5s;
+}
+@media (min-width: 640px) {
+  .projects_section .content .projects .project__content {
+    padding-left: 60px;
+  }
 }
 @keyframes proj-content {
   0% {

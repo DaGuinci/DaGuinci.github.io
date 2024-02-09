@@ -17,6 +17,8 @@
       @media (max-width: #{$large}) { @content; }
     } @else if $size == 'xlarge' and $direction == 'down' {
       @media (max-width: #{$xlarge}) { @content; }
+    } @else if $size == 'xxlarge' and $direction == 'down' {
+      @media (max-width: #{$xxlarge}) { @content; }
     } @else if $size == 'small' and $direction == 'up' {
       @media (min-width: #{$small}) { @content; }
     } @else if $size == 'medium' and $direction == 'up' {
@@ -25,6 +27,8 @@
       @media (min-width: #{$large}) { @content; }
     } @else if $size == 'xlarge' and $direction == 'up' {
       @media (min-width: #{$xlarge}) { @content; }
+    } @else if $size == 'xxlarge' and $direction == 'up' {
+      @media (min-width: #{$xxlarge}) { @content; }
     } @else if str-index(#{$size}, 'px') and $direction == 'down' {
       @media (max-width: #{$size}) { @content; }
     } @else if str-index(#{$size}, 'px') and $direction == 'up' {

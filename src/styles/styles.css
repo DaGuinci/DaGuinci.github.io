@@ -169,6 +169,14 @@ h2 {
     padding: 70px 0;
   }
 }
+@media (min-width: 1440px) {
+  .projects_section .content {
+    margin: 0 250px;
+    gap: 0;
+    justify-content: space-around;
+    align-content: normal;
+  }
+}
 .projects_section .content .title {
   flex-grow: 1;
   flex-basis: 100%;
@@ -240,6 +248,11 @@ h2 {
 @media (min-width: 1024px) {
   .projects_section .content .projects {
     flex-basis: 60%;
+  }
+}
+@media (min-width: 1440px) {
+  .projects_section .content .projects {
+    flex-basis: 40%;
   }
 }
 .projects_section .content .projects .project {
@@ -324,6 +337,12 @@ h2 {
     gap: 170px;
     flex-direction: row;
     padding: 70px 0;
+  }
+}
+@media (min-width: 1440px) {
+  .profile_section .content {
+    margin: 0 250px;
+    gap: 100px;
   }
 }
 .profile_section .content__title {

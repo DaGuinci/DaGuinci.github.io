@@ -34,3 +34,5 @@ function update_projects() {
         }
     }
 }
+
+// launch animations

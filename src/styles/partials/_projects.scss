@@ -22,15 +22,15 @@
             margin: 0 100px;
             gap: 0;
             justify-content: flex-start;
-            align-content: normal;
+            align-content: flex-start;
             padding: 70px 0;
         }
 
         @include breakpoint(xxlarge, up) {
-            margin: 0 250px;
+            margin: 0 200px;
             gap: 0;
             justify-content: space-around;
-            align-content: normal;
+            align-content: flex-start;
         }
 
         .title {
@@ -107,7 +107,6 @@
 
             @include breakpoint(xxlarge, up) {
                 flex-basis: 40%;
-                // max-height: 100%;
             }
 
             .project {

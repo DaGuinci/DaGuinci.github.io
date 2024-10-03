@@ -1,105 +1,152 @@
 .hero {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    background-color: $blue1;
+    gap: 20px;
+    justify-content: space-around;
 
-    &__title {
+    &__content {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-end;
-        min-height: 70px;
-        gap: 10px;
-        color: $orange;
+        justify-content: center;
+        align-items: center;
+        gap: 2vh;
+        width: 100vw;
+        padding: 20px;
 
-        .line {
-            align-self: center;
-            border: 1px solid $orange;
-            width: 120%;
-            animation: line 3s;
-            @keyframes line {
+        @media (orientation: landscape) {
+            width: 80vw;
+            flex-direction: row;
+        }
+
+        // @include breakpoint(medium, up) {
+        //     gap: 40px;
+        //     padding: 40px;
+        // }
+
+        // @include breakpoint(large, up) {
+        //     gap: 60px;
+        //     padding: 60px;
+        // }
+
+        &__picture {
+            max-width: 170px;
+            max-height: 170px;
+            border-radius: 50%;
+            overflow: hidden;
+            z-index: 1000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            animation: picIntro $introDuration;
+            opacity: 1;
+
+            @keyframes picIntro {
                 0% {
-                    width: 0%;
+                    opacity: 0;
+                    transform: translateY(-200%);
                 }
-                25% {
-                    width: 120%;
-                    @include breakpoint(medium, up) {
-                        width: 200%;
-                    }
+                50% {
+                    opacity: 1;
+                    transform: translateY(0%);
                 }
             }
 
-            @include breakpoint(medium, up) {
-                width: 150%;
-            }
-
-            @include breakpoint(large, up) {
-                width: 200%;
-            }
-        }
-
-        .nameblock {
-            min-height: 40px;
-            overflow: hidden;
-
-            h1 {
-                font-size: 2rem;
+            img {
                 width: 100%;
-                white-space: nowrap;
-                overflow: hidden;
-                animation: name $introDuration;
-                transform-origin: 100% 100%;
-                @keyframes name {
-                    0% {
-                        transform: translateY(100%);
-                    }
-                    25% {
-                        transform: translateY(100%);
-                    }
-                    100% {
-                        transform: translateY(0%);
-                    }
-                }
-
-                @include breakpoint(medium, up) {
-                    font-size: 3rem;
-                }
+                height: 100%;
+                object-fit: cover;
             }
 
             @include breakpoint(medium, up) {
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+        &__title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            width: 100%;
+            color: $officeBlue;
+            text-align: center;
+
+            @media screen and (min-width: $large) {
+                width: 50%;
+            }
+
+            @media screen and (min-width: $xlarge) {
+                width: 30%;
+            }
+
+            // Effet typewriting
+            // .wrapper {
+            //     height: 100vh;
+            //     /*This part is important for centering*/
+            //     display: grid;
+            //     place-items: center;
+            //   }
+
+            //   .typing {
+            //     width: 22ch;
+            //     animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+            //     white-space: nowrap;
+            //     overflow: hidden;
+            //     border-right: 3px solid;
+            //     // font-family: monospace;
+            //     // font-size: 2em;
+            //   }
+
+            //   @keyframes typing {
+            //     from {
+            //       width: 0
+            //     }
+            //   }
+
+            //   @keyframes blink {
+            //     50% {
+            //       border-color: transparent
+            //     }
+            //   }
+
+            .nameblock {
+                h1 {
+                    color: $officeBlue;
+                }
+            }
+
+            .careerblock {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 15px;
+                width: 100%;
                 min-height: 60px;
-            }
-        }
-
-        .careerblock {
-            min-height: 60px;
-            overflow: hidden;
-
-            h2 {
-                font-size: 1.6rem;
-                white-space: nowrap;
                 overflow: hidden;
-                animation: subtitle $introDuration;
-                // transform-origin: 100% 100%;
-                @keyframes subtitle {
-                    0% {
-                        transform: translateY(-100%);
-                    }
-                    25% {
-                        transform: translateY(-100%);
-                    }
-                    100% {
-                        transform: translateY(0%);
-                    }
-                }
+                z-index: 1000;
 
-                @include breakpoint(medium, up) {
-                    font-size: 2rem;
+                h2 {
+                    color: $officeYellow;
+                    opacity: 0;
+                    transform: translateX(-100%);
+                    animation: title_entrance 2s 1s ease forwards;
+
+                    &:first-child {
+                        transform: translateX(100%);
+                        animation: title_entrance 2s 1s ease forwards;
+
+                    }
+
+                    @keyframes title_entrance {
+                        0% {
+                            // transform: translateX(100%);
+                        }
+                        100% {
+                            opacity: 1;
+                            transform: translateX(0);
+                        }
+                    }
                 }
             }
         }
-
     }
-}
+ }

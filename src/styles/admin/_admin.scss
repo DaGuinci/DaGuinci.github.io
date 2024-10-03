@@ -1,4 +1,6 @@
 body,
+div,
+section,
 h1,
 h2,
 h3,
@@ -6,6 +8,7 @@ h4,
 h5,
 ul,
 p,
+span,
 a{
     margin: 0;
     box-sizing: border-box;
@@ -18,16 +21,54 @@ html, body, section {
 
 html {
     scroll-snap-type: y mandatory;
+    @media screen and (orientation: landscape) and (max-width: $large) {
+        scroll-snap-type: none;
+    }
 }
 
 section {
+    width: 95%;
+    max-width: 95%;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5vh;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
     scroll-snap-align: start;
     scroll-snap-stop: normal;
-    display: flex;
+
+    @media screen and (orientation: landscape) {
+        max-width: 95vw;
+        padding: 40px 20px;
+
+        // @media screen and (min-width: $large) {
+        //     gap: 8vh;
+        // }
+
+        @media screen and (min-width: $xlarge) {
+            gap: 10vh;
+        }
+    }
+}
+
+h1 {
+    font-size: 2rem;
 }
 
 h2 {
-    color: $web-orange;
-    font-size: 1.6rem;
+    font-family: 'sectionTitle', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: $officeBlue;
 
+    @media screen and (min-width: $large) {
+        font-size: 2.5rem;
+    }
+}
+
+h3 {
+    font-size: 1.2rem;
 }

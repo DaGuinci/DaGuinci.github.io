@@ -1,6 +1,10 @@
 $darkblue: #0b2431;
 $orange: #dd9300;
 $blue1: #3E7188;
+$officeBlue: #3785b0;
+$filterOfficeBlue: invert(45%) sepia(75%) saturate(394%) hue-rotate(157deg) brightness(89%) contrast(92%);
+$officeYellow: #ffd200;
+$filterOfficeYellow: invert(78%) sepia(65%) saturate(1628%) hue-rotate(358deg) brightness(103%) contrast(105%);
 
 $web-green: #c3e88d;
 $web-grey: #263238;
@@ -14,80 +18,19 @@ $large: 1024px;
 $xlarge: 1200px;
 $xxlarge: 1440px;
 
-// $breakpoints: (
-//     'small': 0,
-//     'medium': $medium,
-//     'large': $large,
-//     'xlarge': $xlarge,
-//     'xxlarge': $xxlarge
-// );
-
-// &.color-ruby {
-//     background-color: #D8334A;
-//   }
-
-//   &.color-grapefruit {
-//     background-color: #ED5565;
-//   }
-
-//   &.color-bittersweet {
-//     background-color: #FC6E51;
-//   }
-
-//   &.color-sunflower {
-//     background-color: #FFCE54;
-//   }
-
-//   &.color-straw {
-//     background-color: #E8CE4D;
-//   }
-
-//   &.color-grass {
-//     background-color: #A0D468;
-//   }
-
-//   &.color-mint {
-//     background-color: #48CFAD;
-//   }
-
-//   &.color-teal {
-//     background-color: #A0CECB;
-//   }
-
-//   &.color-aqua {
-//     background-color: #4FC1E9;
-//   }
-
-//   &.color-blue-jeans {
-//     background-color: #5D9CEC;
-//   }
-
-//   &.color-plum {
-//     background-color: #8067B7;
-//   }
-
-//   &.color-lavender {
-//     background-color: #AC92EC;
-//   }
-
-//   &.color-pink-rose {
-//     background-color: #EC87C0;
-//   }
-
-//   &.color-light-gray {
-//     background-color: #F5F7FA;
-//   }
-
-//   &.color-medium-gray {
-//     background-color: #CCD1D9;
-//   }
-
-//   &.color-dark-gray {
-//     background-color: #656D78;
-//   }
-
-//   &.color-charcoal {
-//     background-color: #3C3B3D;
-//   }
-
 $introDuration: 4s;
+
+@font-face {
+    font-family: 'sectionTitle';
+    font-style: normal;
+    src: url('../fonts/Amaranth-Regular.woff2') format("woff2"),
+        url('../fonts/Amaranth-Regular.woff') format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'extraBold';
+    font-style: normal;
+    src: url('../fonts/Roboto-Bold.woff') format("woff");
+    font-display: swap;
+}

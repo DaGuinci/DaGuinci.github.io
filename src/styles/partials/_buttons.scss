@@ -1,6 +1,6 @@
 .btns_section {
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
     bottom: 10px;
     width: 100%;
 
@@ -13,12 +13,18 @@
             width: 40px;
             height: 40px;
 
+            @media screen and (orientation: landscape) and (max-width: 1024px) {
+                width: 30px;
+                height: 30px;
+            }
+
             a {
                 display: inline-block;
                 width: 80%;
                 height: 80%;
                 background-size: contain;
-                filter: invert(63%) sepia(9%) saturate(3027%) hue-rotate(179deg) brightness(92%) contrast(101%);
+                filter: invert(74%) sepia(8%) saturate(7074%) hue-rotate(1deg) brightness(110%) contrast(117%);
+                // filter: invert(47%) sepia(87%) saturate(325%) hue-rotate(157deg) brightness(85%) contrast(97%);
 
                 &:hover {
                     transform: scale(1.3);
